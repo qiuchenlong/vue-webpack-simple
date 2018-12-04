@@ -1,0 +1,33 @@
+# 替换brew代理
+cd "$(brew --repo)"
+git remote set-url origin https://mirrors.ustc.edu.cn/brew.git
+cd "$(brew --repo)/Library/Taps/homebrew/homebrew-core"
+git remote set-url origin https://mirrors.ustc.edu.cn/homebrew-core.git
+
+# brew安装node,npm
+brew install node
+node -v
+npm -v
+
+# 创建目录
+cd Desktop/
+ls
+mkdir github
+ls
+cd github/
+ls
+
+# 下载仓库
+git clone https://github.com/qiuchenlong/vue-webpack-simple.git
+cd vue-webpack-simple/
+ls
+
+# 安装webpack,
+npm install webpack --save-dev
+npm install webpack-cli --save-dev
+npm install url-loader --save-dev
+npm install webpack-dev-server --save-dev
+
+# 运行webpack-dev-server
+npm run dev
+
